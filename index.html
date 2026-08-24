@@ -3,25 +3,372 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#151413">
-<title>Меню вечера</title>
+<meta name="theme-color" content="#0f0f0e">
+<title>Высокий градус — меню</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#151413;--bg2:#1b1917;--cream:#eadcc4;--muted:#b9aa92;--red:#8f2b27;--red2:#6f201d;--line:#5d5144;--shadow:rgba(0,0,0,.35)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,rgba(143,43,39,.12),transparent 32rem),linear-gradient(180deg,var(--bg2),var(--bg));color:var(--cream);font-family:Arial,Helvetica,sans-serif;min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;background-image:linear-gradient(90deg,transparent 0 49%,rgba(255,255,255,.12) 50%,transparent 51%),linear-gradient(0deg,transparent 0 49%,rgba(255,255,255,.08) 50%,transparent 51%);background-size:5px 5px;mix-blend-mode:soft-light}.wrap{width:min(100%,760px);margin:0 auto;padding:0 16px 44px}.hero{position:relative;padding:38px 12px 28px;text-align:center}.hero:before,.hero:after{content:"";display:block;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:0 auto 20px}.hero:after{margin:20px auto 0}.star{color:var(--red);font-size:18px;letter-spacing:.5em;margin-bottom:12px}h1{margin:0;font-family:Impact,"Arial Narrow",Arial,sans-serif;font-size:clamp(46px,11vw,76px);line-height:.9;letter-spacing:.035em;font-weight:700;text-transform:uppercase}.sub{margin:14px 0 0;color:var(--red);font-family:"Arial Narrow",Arial,sans-serif;font-size:15px;font-weight:800;letter-spacing:.14em}.intro{color:var(--muted);text-align:center;font-size:14px;line-height:1.55;margin:4px auto 24px;max-width:540px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:34px}.cat{position:relative;min-height:148px;display:flex;flex-direction:column;justify-content:space-between;padding:18px;color:var(--cream);text-decoration:none;border:1px solid #8f7c63;background:linear-gradient(160deg,rgba(255,255,255,.025),rgba(143,43,39,.055))}.cat-wide{grid-column:1/-1;min-height:112px}.cat:after{content:"";position:absolute;inset:6px;border:1px solid rgba(143,43,39,.5);pointer-events:none}.cat-icon{font-size:31px;color:var(--red);line-height:1}.cat strong{position:relative;z-index:1;font-family:Impact,"Arial Narrow",Arial,sans-serif;font-size:24px;letter-spacing:.055em;font-weight:500}.cat small{position:relative;z-index:1;color:var(--muted);font-size:11px}.section{scroll-margin-top:74px;padding:25px 0 12px}.section-title{display:flex;align-items:center;gap:12px;margin:0 0 4px}.num{color:var(--red);font-weight:900;font-size:13px}h2{margin:0;font-family:Impact,"Arial Narrow",Arial,sans-serif;font-size:34px;letter-spacing:.055em;font-weight:500}.tagline{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.05em;margin:7px 0 17px;padding-bottom:12px;border-bottom:1px solid var(--red2)}.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:15px 0;border-bottom:1px dotted var(--line)}.item-name{margin:0;text-transform:uppercase;font-family:"Arial Narrow",Arial,sans-serif;font-weight:800;letter-spacing:.025em;font-size:18px;line-height:1.12}.desc{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.35}.price{white-space:nowrap;align-self:start;font-family:"Arial Narrow",Arial,sans-serif;font-size:18px;font-weight:800;letter-spacing:.03em}.feature{margin:8px -10px;padding:16px 10px;border-left:3px solid var(--red);background:rgba(143,43,39,.09)}.food-head{margin:22px 0 4px;display:inline-block;padding:6px 11px;background:var(--red2);color:var(--cream);font-family:"Arial Narrow",Arial,sans-serif;font-weight:900;letter-spacing:.08em;font-size:14px}.food-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:13px 0;border-bottom:1px dotted var(--line);font-family:"Arial Narrow",Arial,sans-serif;font-weight:800;font-size:17px;text-transform:uppercase;align-items:start}.soon,.note{white-space:nowrap;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:none;padding-top:2px}.back{position:fixed;right:14px;bottom:16px;z-index:5;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);background:var(--red2);border:1px solid #aa4a43;box-shadow:0 5px 16px var(--shadow);font-size:20px}.footer{margin-top:32px;padding:22px 0 4px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11px}.stamp{display:inline-block;margin-bottom:14px;border:2px solid var(--red);color:var(--red);padding:9px 12px;font-weight:900;line-height:1.2;letter-spacing:.06em;transform:rotate(-2deg)}@media(max-width:440px){.wrap{padding-left:14px;padding-right:14px}.hero{padding-top:30px}.grid{gap:9px}.cat{min-height:132px;padding:15px}.cat-wide{min-height:105px}.cat strong{font-size:21px}.item-name{font-size:17px}.desc{font-size:12px}.food-row{font-size:16px}.soon,.note{font-size:10px}}
+:root{
+  --bg:#0f0f0e;
+  --panel:#151412;
+  --panel2:#1b1815;
+  --cream:#eadcc4;
+  --cream2:#d5c5aa;
+  --muted:#998d7a;
+  --red:#8c2925;
+  --red2:#5d1c19;
+  --gold:#a68f6d;
+  --line:#3a342c;
+  --soft:#201d19;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--cream);
+  background:
+    radial-gradient(circle at 50% -8%,rgba(140,41,37,.17),transparent 25rem),
+    linear-gradient(180deg,#11110f 0%,#0c0c0b 100%);
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.04;
+  background-image:radial-gradient(rgba(255,255,255,.6) .45px,transparent .45px);
+  background-size:4px 4px;
+  z-index:10;
+}
+a{color:inherit}
+.shell{width:min(100%,760px);margin:0 auto;padding:0 15px 110px}
+.topbar{
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(166,143,109,.25);
+  position:relative;
+  z-index:2;
+}
+.monogram{font-family:"Cormorant Garamond",serif;font-size:27px;color:var(--red);letter-spacing:.04em}
+.brand-mini{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--cream2)}
+.menu-mark{font-family:"Oswald",sans-serif;font-size:20px;color:var(--gold);letter-spacing:-.1em}
+.hero{padding:36px 4px 28px;position:relative;overflow:hidden}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:160px;height:160px;border-radius:50%;
+  background:var(--red2);
+  right:-95px;top:74px;opacity:.8;
+  box-shadow:-75px 95px 0 -42px rgba(140,41,37,.35);
+}
+.hero-kicker{font-family:"Oswald",sans-serif;color:var(--red);font-size:12px;letter-spacing:.5em;text-transform:uppercase;margin:0 0 10px}
+h1{
+  margin:0;
+  position:relative;
+  z-index:1;
+  font-family:"Oswald",sans-serif;
+  font-size:clamp(58px,16vw,100px);
+  line-height:.91;
+  font-weight:500;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+}
+.hero-sub{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--cream2);font-size:18px;margin:16px 0 0;position:relative;z-index:1}
+.hero-sub b{color:var(--red);font-weight:500;padding:0 5px}
+.category-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 30px}
+.cat{
+  min-height:156px;
+  text-decoration:none;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  overflow:hidden;
+  border:1px solid rgba(166,143,109,.38);
+  background:linear-gradient(160deg,#191714,#11110f);
+  padding:17px;
+}
+.cat:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 15%,rgba(6,6,6,.86) 100%);z-index:1}
+.cat.has-photo{background-size:cover;background-position:center}
+.cat.has-photo:after{content:"";position:absolute;inset:0;background:rgba(12,10,9,.18);mix-blend-mode:multiply}
+.cat-icon{position:absolute;left:16px;top:17px;z-index:2;color:var(--gold);font-size:25px;line-height:1}
+.cat-title{position:relative;z-index:2;font-family:"Oswald",sans-serif;font-size:25px;letter-spacing:.075em;text-transform:uppercase;font-weight:400}
+.cat-arrow{position:relative;z-index:2;color:var(--gold);font-size:21px;margin-top:6px}
+.cat.nast{background-image:url('https://images.unsplash.com/photo-1759308598406-ee98674bed75?auto=format&fit=crop&fm=jpg&q=78&w=800')}
+.cat.cock{background-image:url('https://images.unsplash.com/photo-1780963135005-277cf8028367?auto=format&fit=crop&fm=jpg&q=78&w=800')}
+.cat.shot{background-image:linear-gradient(160deg,rgba(140,41,37,.22),transparent),linear-gradient(160deg,#191714,#0e0e0d)}
+.cat.food{background-image:radial-gradient(circle at 50% 45%,rgba(140,41,37,.28),transparent 32%),linear-gradient(135deg,#171513,#0c0c0b)}
+.cat.drink{background-image:linear-gradient(160deg,rgba(166,143,109,.09),transparent),linear-gradient(160deg,#191714,#0e0e0d)}
+.cat.hookah{background-image:radial-gradient(circle at 60% 30%,rgba(255,255,255,.08),transparent 28%),linear-gradient(160deg,#191714,#0e0e0d)}
+.tabs{
+  position:sticky;
+  top:0;
+  z-index:20;
+  margin:0 -15px;
+  padding:0 15px;
+  background:rgba(15,15,14,.94);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-top:1px solid rgba(166,143,109,.18);
+  border-bottom:1px solid rgba(166,143,109,.22);
+  display:flex;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{flex:0 0 auto;text-decoration:none;padding:14px 11px 12px;font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent}
+.tabs a.active{color:var(--red);border-color:var(--red)}
+.section{scroll-margin-top:58px;padding:42px 0 9px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:20px}
+.section-no{font-family:"Oswald",sans-serif;color:var(--red);font-size:11px;letter-spacing:.16em;margin-bottom:5px}
+h2{font-family:"Oswald",sans-serif;font-weight:400;font-size:38px;letter-spacing:.055em;margin:0;text-transform:uppercase}
+.section-note{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);font-size:15px;text-align:right;max-width:180px}
+.rule{height:1px;background:linear-gradient(90deg,var(--red),rgba(140,41,37,.15));margin:-6px 0 20px}
+.tincture-list{display:flex;flex-direction:column;gap:0}
+.tincture{
+  display:grid;
+  grid-template-columns:94px minmax(0,1fr) auto;
+  gap:15px;
+  align-items:center;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+}
+.tincture-photo{
+  width:94px;height:108px;object-fit:cover;
+  border:1px solid rgba(166,143,109,.3);
+  filter:saturate(.82) contrast(1.05) brightness(.84);
+  background:#151412;
+}
+.item-name{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;line-height:1.02;margin:0;color:var(--cream)}
+.ingredients{font-size:11px;line-height:1.5;color:var(--muted);margin:6px 0 0}
+.mood{font-family:"Cormorant Garamond",serif;font-style:italic;color:#a99478;font-size:14px;line-height:1.2;margin:7px 0 0}
+.price{font-family:"Oswald",sans-serif;font-size:20px;white-space:nowrap;color:var(--cream2);align-self:start;padding-top:3px}
+.badge{display:inline-block;border:1px solid var(--red);color:var(--red);font-family:"Oswald",sans-serif;font-size:9px;letter-spacing:.09em;padding:3px 6px;margin-bottom:7px;text-transform:uppercase}
+.item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+.item .item-name{font-size:21px}
+.item .ingredients{font-size:12px}
+.item.feature{margin:7px 0;padding:18px 14px;border:1px solid rgba(140,41,37,.55);background:linear-gradient(90deg,rgba(140,41,37,.09),transparent)}
+.food-atmosphere{
+  min-height:150px;
+  margin:0 0 18px;
+  border:1px solid rgba(166,143,109,.22);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%,rgba(201,74,38,.34),transparent 35%),
+    radial-gradient(ellipse at 35% 90%,rgba(140,41,37,.28),transparent 25%),
+    linear-gradient(180deg,#11100f,#19130f);
+}
+.food-atmosphere:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(165deg,transparent 0 12px,rgba(255,255,255,.018) 13px 15px);
+}
+.food-atmosphere strong{position:relative;z-index:1;font-family:"Oswald",sans-serif;font-weight:400;font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+.food-atmosphere span{display:block;color:var(--red);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:14px;letter-spacing:0;margin-top:8px;text-transform:none}
+.food-group{margin-top:24px}
+.food-title{font-family:"Oswald",sans-serif;color:var(--red);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.food-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.food-name{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;line-height:1.08}
+.food-price{font-family:"Oswald",sans-serif;font-size:18px;color:var(--cream2);white-space:nowrap}
+.soon{font-family:"Oswald",sans-serif;font-size:10px;letter-spacing:.05em;color:var(--red);white-space:nowrap;padding-top:4px}
+.hookah-card{border:1px solid rgba(166,143,109,.3);padding:18px;margin-bottom:10px;background:linear-gradient(140deg,rgba(255,255,255,.02),rgba(140,41,37,.04))}
+.hookah-card .item{padding:0;border:0}
+.footer{margin-top:45px;border-top:1px solid var(--line);padding:28px 0 0;text-align:center}
+.footer-brand{font-family:"Oswald",sans-serif;letter-spacing:.24em;font-size:12px;color:var(--cream2)}
+.footer-copy{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);font-size:14px;margin-top:8px}
+.back{position:fixed;right:14px;bottom:18px;z-index:30;width:42px;height:42px;border-radius:50%;background:rgba(93,28,25,.94);border:1px solid #9d4740;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;box-shadow:0 9px 24px rgba(0,0,0,.35)}
+@media(max-width:520px){
+  .shell{padding-left:13px;padding-right:13px}
+  .tabs{margin-left:-13px;margin-right:-13px;padding-left:7px;padding-right:7px}
+  .category-grid{gap:8px}
+  .cat{min-height:145px;padding:14px}
+  .cat-title{font-size:22px}
+  .tincture{grid-template-columns:78px minmax(0,1fr) auto;gap:11px}
+  .tincture-photo{width:78px;height:96px}
+  .item-name{font-size:19px}
+  .ingredients{font-size:10.5px}
+  .mood{font-size:13px}
+  .price{font-size:18px}
+  h2{font-size:34px}
+  .section-note{font-size:13px;max-width:140px}
+  .food-name{font-size:18px}
+  .food-price{font-size:16px}
+}
 </style>
 </head>
 <body id="top">
-<div class="wrap">
-<header class="hero"><div class="star">★</div><h1>Меню<br>вечера</h1><p class="sub">ЧТО ЕСТЬ • ЧТО ПИТЬ</p></header>
-<p class="intro">Выбирай раздел — дальше всё просто. Характерные настойки, коктейли, шоты, напитки, кальян и кухня.</p>
-<nav class="grid" aria-label="Разделы меню"><a class="cat" href="#nastoyki"><span class="cat-icon">◒</span><strong>НАСТОЙКИ</strong><small>12 позиций</small></a><a class="cat" href="#cocktails"><span class="cat-icon">▽</span><strong>КОКТЕЙЛИ</strong><small>14 позиций</small></a><a class="cat" href="#shots"><span class="cat-icon">▣</span><strong>ШОТЫ</strong><small>8 позиций</small></a><a class="cat" href="#food"><span class="cat-icon">◆</span><strong>КУХНЯ</strong><small>закуски • фритюр • гриль</small></a><a class="cat" href="#drinks"><span class="cat-icon">◉</span><strong>НАПИТКИ</strong><small>безалкогольные</small></a><a class="cat" href="#hookah"><span class="cat-icon">♨</span><strong>КАЛЬЯН</strong><small>3 настроения на вечер</small></a></nav>
-<section class="section" id="nastoyki"><div class="section-title"><span class="num">01</span><h2>НАСТОЙКИ</h2></div><p class="tagline">Характерные, яркие и с настроением.</p>
-<div class="item"><div><p class="item-name">Клубника — базилик</p><p class="desc">сладко, свежо и опасно приятно</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Банан — сливки</p><p class="desc">будто десерт решил стать взрослым</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Киви — мята</p><p class="desc">бодрит лучше некоторых решений</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Апельсин — чили</p><p class="desc">сначала цитрус, потом характер</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Облепиховая</p><p class="desc">солнечно, ярко и по-своему дерзко</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Мёд — горчица</p><p class="desc">сладко, остро, неожиданно</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Кофе — сливки</p><p class="desc">вечер только начинается</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Огуречная</p><p class="desc">свежо, легко, с намёком на продолжение</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Чесночно-перцовая</p><p class="desc">выбор смелых и очень своих</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Халва</p><p class="desc">мягко, сладко, с восточным характером</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Сникерс</p><p class="desc">что-то знакомое, только интереснее</p></div><span class="price">179 ₽</span></div><div class="item"><div><p class="item-name">Вишня — орех</p><p class="desc">насыщенно, мягко и благородно</p></div><span class="price">179 ₽</span></div></section>
-<section class="section" id="cocktails"><div class="section-title"><span class="num">02</span><h2>КОКТЕЙЛИ</h2></div><p class="tagline">Классика, настроение и немного хорошего безрассудства.</p><div class="item"><div><p class="item-name">Розовая пантера</p><p class="desc">яркая, эффектная, знает себе цену</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Секс на пляже</p><p class="desc">легенда, которая не нуждается в представлении</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Джин Санрайз</p><p class="desc">красиво начинается и хорошо продолжается</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Пина Колада</p><p class="desc">отпуск, который нашёл тебя сам</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Космополитен</p><p class="desc">стильно, легко и с характером</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Клубничный мохито</p><p class="desc">свежесть, лето и ещё один</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Барби</p><p class="desc">красиво, дерзко, фотогенично</p></div><span class="price">289 ₽</span></div><div class="item feature"><div><p class="item-name">Как назовёшь, так и поедет</p><p class="desc">дальше всё зависит от тебя</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Бора-Бора</p><p class="desc">тропический побег от реальности</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Корсика</p><p class="desc">звучит красиво, пьётся так же</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Виски-кола</p><p class="desc">просто, честно, по делу</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Лонг-Айленд</p><p class="desc">для тех, кто не любит полумеры</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Текила Бум</p><p class="desc">если хочется шума чуть быстрее</p></div><span class="price">289 ₽</span></div><div class="item"><div><p class="item-name">Самбука</p><p class="desc">эффектно и с огоньком</p></div><span class="price">289 ₽</span></div></section>
-<section class="section" id="shots"><div class="section-title"><span class="num">03</span><h2>ШОТЫ</h2></div><p class="tagline">Коротко, ярко и без лишних разговоров.</p><div class="item"><div><p class="item-name">Привидение</p><p class="desc">появляется внезапно, исчезает быстро</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">Ириска</p><p class="desc">мягко заходит, запоминается надолго</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">Тик-Так</p><p class="desc">маленький, бодрый, не такой простой</p></div><span class="price">199 ₽</span></div><div class="item feature"><div><p class="item-name">ТАНЦЫ</p><p class="desc">название говорит само за себя</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">B-52</p><p class="desc">классика короткого жанра</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">Камикадзе</p><p class="desc">без лишних прелюдий</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">Боярский</p><p class="desc">строго, ярко, по-нашему</p></div><span class="price">199 ₽</span></div><div class="item"><div><p class="item-name">Серебряная пуля</p><p class="desc">точное попадание в настроение</p></div><span class="price">199 ₽</span></div></section>
-<section class="section" id="food"><div class="section-title"><span class="num">04</span><h2>КУХНЯ</h2></div><p class="tagline">Когда одного хорошего настроения уже мало.</p><div class="food-head">ЗАКУСКИ</div><div class="food-row"><span>Соленья</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Сырная нарезка</span><span>220 ₽</span></div><div class="food-row"><span>Мясная нарезка</span><span>250 ₽</span></div><div class="food-row"><span>Колбасная нарезка</span><span>260 ₽</span></div><div class="food-row"><span>Рыбная нарезка</span><span>500 ₽</span></div><div class="food-row"><span>Жареные гренки</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Салат «Цезарь»</span><span>350 ₽</span></div><div class="food-row"><span>Канапе</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Ассорти брускетт — 3 шт. (овощная, рыбная, мясная)</span><span>280 ₽</span></div><div class="food-head">ФРИТЮР</div><div class="food-row"><span>Сырные палочки</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Стрипсы</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Наггетсы лёгкая (4–5 шт.)</span><span>130 ₽</span></div><div class="food-row"><span>Наггетсы стандарт (6–8 шт.)</span><span>200 ₽</span></div><div class="food-row"><span>Наггетсы большая (9–12 шт.)</span><span>310 ₽</span></div><div class="food-row"><span>Крылья в панировке лёгкая (3–4 шт.)</span><span>250 ₽</span></div><div class="food-row"><span>Крылья в панировке стандарт (5–6 шт.)</span><span>380 ₽</span></div><div class="food-row"><span>Крылья в панировке большая (8–9 шт.)</span><span>570 ₽</span></div><div class="food-row"><span>Луковые кольца лёгкая (6–8 шт.)</span><span>120 ₽</span></div><div class="food-row"><span>Луковые кольца стандарт (10–12 шт.)</span><span>180 ₽</span></div><div class="food-row"><span>Луковые кольца большая (14–16 шт.)</span><span>250 ₽</span></div><div class="food-row"><span>Кольца кальмара</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Картофель фри</span><span>100 ₽</span></div><div class="food-head">ГРИЛЬ</div><div class="food-row"><span>Шашлык из свинины (100 г)</span><span>230 ₽</span></div><div class="food-row"><span>Овощи гриль</span><span class="soon">Скоро в продаже</span></div><div class="food-row"><span>Шампиньоны гриль</span><span class="soon">Скоро в продаже</span></div></section>
-<section class="section" id="drinks"><div class="section-title"><span class="num">05</span><h2>НАПИТКИ</h2></div><p class="tagline">Когда хочется просто освежиться.</p><div class="item"><div><p class="item-name">Компот (1 л)</p></div><span class="price">250 ₽</span></div><div class="item"><div><p class="item-name">Сок</p></div><span class="note">Уточняйте у официанта</span></div></section>
-<section class="section" id="hookah"><div class="section-title"><span class="num">06</span><h2>КАЛЬЯН</h2></div><p class="tagline">Выбирай характер — дальше дым всё решит сам.</p><div class="item feature"><div><p class="item-name">Тяжёлый фреш</p><p class="desc">свежий, плотный и без компромиссов</p></div><span class="price">1200 ₽</span></div><div class="item"><div><p class="item-name">Средний фруктовый</p><p class="desc">фрукты здесь явно не ради витаминов</p></div><span class="price">1000 ₽</span></div><div class="item"><div><p class="item-name">Лёгкий десертный</p><p class="desc">сладко, мягко, почти невинно</p></div><span class="price">900 ₽</span></div></section>
-<footer class="footer"><div class="stamp">НАЛИВАЕМ С ДУШОЙ<br>ОТДЫХАЕМ С ХАРАКТЕРОМ</div></footer>
-</div><a class="back" href="#top" aria-label="Наверх">↑</a>
-</body></html>
+<div class="shell">
+  <header class="topbar">
+    <div class="monogram">ВГ</div>
+    <div class="brand-mini">Высокий градус</div>
+    <div class="menu-mark">☰</div>
+  </header>
+
+  <section class="hero">
+    <p class="hero-kicker">бар • Чаплыгин</p>
+    <h1>Высокий<br>градус</h1>
+    <p class="hero-sub">Что есть <b>•</b> что пить <b>•</b> что запомнится</p>
+  </section>
+
+  <nav class="category-grid" aria-label="Разделы меню">
+    <a class="cat has-photo nast" href="#nastoyki"><span class="cat-icon">◒</span><span class="cat-title">Настойки</span><span class="cat-arrow">→</span></a>
+    <a class="cat has-photo cock" href="#cocktails"><span class="cat-icon">▽</span><span class="cat-title">Коктейли</span><span class="cat-arrow">→</span></a>
+    <a class="cat shot" href="#shots"><span class="cat-icon">▣</span><span class="cat-title">Шоты</span><span class="cat-arrow">→</span></a>
+    <a class="cat food" href="#food"><span class="cat-icon">◇</span><span class="cat-title">Кухня</span><span class="cat-arrow">→</span></a>
+    <a class="cat drink" href="#drinks"><span class="cat-icon">◉</span><span class="cat-title">Напитки</span><span class="cat-arrow">→</span></a>
+    <a class="cat hookah" href="#hookah"><span class="cat-icon">♨</span><span class="cat-title">Кальян</span><span class="cat-arrow">→</span></a>
+  </nav>
+
+  <nav class="tabs" aria-label="Быстрая навигация">
+    <a href="#nastoyki">Настойки</a><a href="#cocktails">Коктейли</a><a href="#shots">Шоты</a><a href="#food">Кухня</a><a href="#drinks">Напитки</a><a href="#hookah">Кальян</a>
+  </nav>
+
+  <section class="section" id="nastoyki" data-tab="nastoyki">
+    <div class="section-head"><div><div class="section-no">01</div><h2>Настойки</h2></div><div class="section-note">ручная работа и натуральные ингредиенты</div></div>
+    <div class="rule"></div>
+    <div class="tincture-list">
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1759308598406-ee98674bed75?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Тёмно-красный напиток с базиликом"><div><span class="badge">Хит</span><p class="item-name">Клубника — базилик</p><p class="ingredients">водка • клубника • зелёный базилик • сахарный сироп</p><p class="mood">ягодная свежесть с пряным акцентом</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1781785162713-41d46465b35b?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Сливочный напиток в бокале"><div><p class="item-name">Банан — сливки</p><p class="ingredients">водка • банан • молоко • сливки • сахар</p><p class="mood">мягкий, сливочный, десертный</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1774806270626-fd20a7650941?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Зелёный напиток со льдом"><div><p class="item-name">Киви — мята</p><p class="ingredients">водка • киви • лайм • мята • сахар</p><p class="mood">лёгкий, освежающий, с яркой кислинкой</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1780963135005-277cf8028367?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Янтарный напиток в драматичном свете"><div><p class="item-name">Апельсин — чили</p><p class="ingredients">водка • апельсин • чили • сахарный сироп</p><p class="mood">яркий цитрус и согревающий послевкусие</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1780963135005-277cf8028367?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Янтарный напиток в бокале"><div><p class="item-name">Облепиховая</p><p class="ingredients">водка • облепиха • апельсин • мёд • корица • ваниль</p><p class="mood">солнечная, пряная, насыщенная</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1780963135005-277cf8028367?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Пряный напиток в тёмной атмосфере"><div><p class="item-name">Мёд — горчица</p><p class="ingredients">водка • мёд • горчица • лимон • специи</p><p class="mood">сладко, остро и неожиданно</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1781785162713-41d46465b35b?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Кофейно-сливочный напиток"><div><p class="item-name">Кофе — сливки</p><p class="ingredients">водка • кофе • шоколадное молоко • сливки • сгущёнка • ваниль</p><p class="mood">бархатистый и десертный</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1774806270626-fd20a7650941?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Свежий зелёный напиток"><div><p class="item-name">Огуречная</p><p class="ingredients">водка • свежий огурец • укроп • чеснок • специи</p><p class="mood">свежо, легко и необычно</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1780963135005-277cf8028367?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Тёмный пряный напиток"><div><p class="item-name">Чесночно-перцовая</p><p class="ingredients">водка • чеснок • красный перец</p><p class="mood">для тех, кто любит характер</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1781785162713-41d46465b35b?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Сливочный десертный напиток"><div><p class="item-name">Халва</p><p class="ingredients">водка • халва • сливки • молоко</p><p class="mood">мягко, сладко, с восточным характером</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1781785162713-41d46465b35b?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Сливочный шоколадный напиток"><div><p class="item-name">Сникерс</p><p class="ingredients">водка • Snickers • сливки • сгущёнка • сахар</p><p class="mood">знакомый вкус в новом настроении</p></div><span class="price">179 ₽</span></article>
+      <article class="tincture"><img class="tincture-photo" loading="lazy" src="https://images.unsplash.com/photo-1759308598406-ee98674bed75?auto=format&fit=crop&fm=jpg&q=76&w=500" alt="Вишнёвый напиток в бокале"><div><p class="item-name">Вишня — орех</p><p class="ingredients">водка • вишня • корица • мускатный орех • сахар</p><p class="mood">насыщенно, мягко и благородно</p></div><span class="price">179 ₽</span></article>
+    </div>
+  </section>
+
+  <section class="section" id="cocktails" data-tab="cocktails">
+    <div class="section-head"><div><div class="section-no">02</div><h2>Коктейли</h2></div><div class="section-note">классика и немного хорошего безрассудства</div></div><div class="rule"></div>
+    <div class="item"><div><p class="item-name">Розовая пантера</p><p class="ingredients">яркая, эффектная, знает себе цену</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Секс на пляже</p><p class="ingredients">легенда, которая не нуждается в представлении</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Джин Санрайз</p><p class="ingredients">красиво начинается и хорошо продолжается</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Пина Колада</p><p class="ingredients">отпуск, который нашёл тебя сам</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Космополитен</p><p class="ingredients">стильно, легко и с характером</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Клубничный мохито</p><p class="ingredients">свежесть, лето и ещё один</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Барби</p><p class="ingredients">красиво, дерзко, фотогенично</p></div><span class="price">289 ₽</span></div>
+    <div class="item feature"><div><span class="badge">Наш выбор</span><p class="item-name">Как назовёшь, так и поедет</p><p class="ingredients">дальше всё зависит от тебя</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Бора-Бора</p><p class="ingredients">тропический побег от реальности</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Корсика</p><p class="ingredients">звучит красиво, пьётся так же</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Виски-кола</p><p class="ingredients">просто, честно, по делу</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Лонг-Айленд</p><p class="ingredients">для тех, кто не любит полумеры</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Текила Бум</p><p class="ingredients">если хочется шума чуть быстрее</p></div><span class="price">289 ₽</span></div>
+    <div class="item"><div><p class="item-name">Самбука</p><p class="ingredients">эффектно и с огоньком</p></div><span class="price">289 ₽</span></div>
+  </section>
+
+  <section class="section" id="shots" data-tab="shots">
+    <div class="section-head"><div><div class="section-no">03</div><h2>Шоты</h2></div><div class="section-note">коротко, ярко и без лишних разговоров</div></div><div class="rule"></div>
+    <div class="item"><div><p class="item-name">Привидение</p><p class="ingredients">появляется внезапно, исчезает быстро</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">Ириска</p><p class="ingredients">мягко заходит, запоминается надолго</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">Тик-Так</p><p class="ingredients">маленький, бодрый, не такой простой</p></div><span class="price">199 ₽</span></div>
+    <div class="item feature"><div><span class="badge">Хит</span><p class="item-name">ТАНЦЫ</p><p class="ingredients">название говорит само за себя</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">B-52</p><p class="ingredients">классика короткого жанра</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">Камикадзе</p><p class="ingredients">без лишних прелюдий</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">Боярский</p><p class="ingredients">строго, ярко, по-нашему</p></div><span class="price">199 ₽</span></div>
+    <div class="item"><div><p class="item-name">Серебряная пуля</p><p class="ingredients">точное попадание в настроение</p></div><span class="price">199 ₽</span></div>
+  </section>
+
+  <section class="section" id="food" data-tab="food">
+    <div class="section-head"><div><div class="section-no">04</div><h2>Кухня</h2></div><div class="section-note">без постановочных фото — только то, что действительно подаём</div></div><div class="rule"></div>
+    <div class="food-atmosphere"><strong>Горячее. Сытное. Настоящее.<span>никаких чужих фотографий блюд</span></strong></div>
+
+    <div class="food-group"><div class="food-title">Закуски</div>
+      <div class="food-row"><span class="food-name">Соленья</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Сырная нарезка</span><span class="food-price">220 ₽</span></div>
+      <div class="food-row"><span class="food-name">Мясная нарезка</span><span class="food-price">250 ₽</span></div>
+      <div class="food-row"><span class="food-name">Колбасная нарезка</span><span class="food-price">260 ₽</span></div>
+      <div class="food-row"><span class="food-name">Рыбная нарезка</span><span class="food-price">500 ₽</span></div>
+      <div class="food-row"><span class="food-name">Жареные гренки</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Салат «Цезарь»</span><span class="food-price">350 ₽</span></div>
+      <div class="food-row"><span class="food-name">Канапе</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Ассорти брускетт — 3 шт. (овощная, рыбная, мясная)</span><span class="food-price">280 ₽</span></div>
+    </div>
+
+    <div class="food-group"><div class="food-title">Фритюр</div>
+      <div class="food-row"><span class="food-name">Сырные палочки</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Стрипсы</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Наггетсы лёгкая (4–5 шт.)</span><span class="food-price">130 ₽</span></div>
+      <div class="food-row"><span class="food-name">Наггетсы стандарт (6–8 шт.)</span><span class="food-price">200 ₽</span></div>
+      <div class="food-row"><span class="food-name">Наггетсы большая (9–12 шт.)</span><span class="food-price">310 ₽</span></div>
+      <div class="food-row"><span class="food-name">Крылья в панировке лёгкая (3–4 шт.)</span><span class="food-price">250 ₽</span></div>
+      <div class="food-row"><span class="food-name">Крылья в панировке стандарт (5–6 шт.)</span><span class="food-price">380 ₽</span></div>
+      <div class="food-row"><span class="food-name">Крылья в панировке большая (8–9 шт.)</span><span class="food-price">570 ₽</span></div>
+      <div class="food-row"><span class="food-name">Луковые кольца лёгкая (6–8 шт.)</span><span class="food-price">120 ₽</span></div>
+      <div class="food-row"><span class="food-name">Луковые кольца стандарт (10–12 шт.)</span><span class="food-price">180 ₽</span></div>
+      <div class="food-row"><span class="food-name">Луковые кольца большая (14–16 шт.)</span><span class="food-price">250 ₽</span></div>
+      <div class="food-row"><span class="food-name">Кольца кальмара</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Картофель фри</span><span class="food-price">100 ₽</span></div>
+    </div>
+
+    <div class="food-group"><div class="food-title">Гриль</div>
+      <div class="food-row"><span class="food-name">Шашлык из свинины (100 г)</span><span class="food-price">230 ₽</span></div>
+      <div class="food-row"><span class="food-name">Овощи гриль</span><span class="soon">Скоро в продаже</span></div>
+      <div class="food-row"><span class="food-name">Шампиньоны гриль</span><span class="soon">Скоро в продаже</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="drinks" data-tab="drinks">
+    <div class="section-head"><div><div class="section-no">05</div><h2>Напитки</h2></div><div class="section-note">когда хочется просто освежиться</div></div><div class="rule"></div>
+    <div class="item"><div><p class="item-name">Компот (1 л)</p></div><span class="price">250 ₽</span></div>
+    <div class="item"><div><p class="item-name">Сок</p><p class="ingredients">уточняйте вкусы у официанта</p></div><span class="price">—</span></div>
+  </section>
+
+  <section class="section" id="hookah" data-tab="hookah">
+    <div class="section-head"><div><div class="section-no">06</div><h2>Кальян</h2></div><div class="section-note">выбирай характер — дальше дым всё решит сам</div></div><div class="rule"></div>
+    <div class="hookah-card"><div class="item"><div><span class="badge">Плотно</span><p class="item-name">Тяжёлый фреш</p><p class="ingredients">свежий, плотный и без компромиссов</p></div><span class="price">1200 ₽</span></div></div>
+    <div class="hookah-card"><div class="item"><div><p class="item-name">Средний фруктовый</p><p class="ingredients">фрукты здесь явно не ради витаминов</p></div><span class="price">1000 ₽</span></div></div>
+    <div class="hookah-card"><div class="item"><div><p class="item-name">Лёгкий десертный</p><p class="ingredients">сладко, мягко, почти невинно</p></div><span class="price">900 ₽</span></div></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">ВЫСОКИЙ ГРАДУС</div>
+    <div class="footer-copy">место, в котором хороший вечер начинается сам</div>
+  </footer>
+</div>
+<a class="back" href="#top" aria-label="Наверх">↑</a>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('.tabs a')];
+  const sections = [...document.querySelectorAll('[data-tab]')];
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
+    if (!visible) return;
+    const id = visible.target.id;
+    tabs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    const active = tabs.find(a => a.classList.contains('active'));
+    if (active) active.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+  }, {rootMargin:'-70px 0px -58% 0px',threshold:[0,.15,.35,.6]});
+  sections.forEach(s => observer.observe(s));
+})();
+</script>
+</body>
+</html>
