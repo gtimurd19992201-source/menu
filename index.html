@@ -3,142 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b0c0b">
+<meta name="theme-color" content="#0d0e0d">
 <title>Высокий градус — меню</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0c0b;--panel:#111210;--cream:#e8d9be;--muted:#9f927e;--gold:#b69b73;--red:#8c2925;--red2:#5d1d1a;--line:#3a352f}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:#080908}body{margin:0;background:#080908;color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit}.site{width:min(100%,520px);margin:0 auto;min-height:100vh;background:radial-gradient(circle at 80% 8%,rgba(140,41,37,.08),transparent 23rem),linear-gradient(180deg,#0e0f0e,#090a09);padding-bottom:64px}
-.topbar{height:58px;position:sticky;top:0;z-index:30;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:0 16px;background:rgba(10,11,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid #292720}
-.monogram{font:500 26px/1 "Oswald",Arial;color:var(--red);letter-spacing:-.08em}.brand-mini{text-align:center;font:500 11px/1 "Oswald",Arial;letter-spacing:.32em;color:#d4c5ad}.burger{justify-self:end;width:24px;display:grid;gap:5px}.burger i{height:1px;background:#c9ad86}
-.hero{position:relative;padding:34px 18px 26px;overflow:hidden}.hero:after{content:"";position:absolute;right:-70px;top:86px;width:150px;height:150px;border-radius:50%;background:#5d1d1a;opacity:.75}.hero-kicker{margin:0 0 18px;font:500 11px/1 "Oswald";letter-spacing:.34em;color:#bea37e}.hero h1{position:relative;z-index:1;margin:0;font:500 clamp(58px,16vw,88px)/.88 "Oswald",Arial Narrow,sans-serif;letter-spacing:.03em;color:#eadac0}.hero .menu-word{margin:20px 0 8px;font:500 18px/1 "Oswald";letter-spacing:.32em;color:#a6302b}.hero .tag{margin:0;font:italic 500 17px/1.35 "Cormorant Garamond",Georgia;color:#c5b59e}
-.categories{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px 30px}
-.cat{position:relative;min-height:154px;overflow:hidden;border:1px solid #554a3e;text-decoration:none;background:linear-gradient(145deg,#171512,#0d0e0d);padding:16px;display:flex;flex-direction:column;justify-content:flex-end}
-.cat:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(183,155,115,.08),transparent 34%),linear-gradient(180deg,transparent,rgba(0,0,0,.6));}
-.cat .icon{position:absolute;z-index:1;right:13px;top:16px;width:70px;height:70px;opacity:.98}.cat .title{position:relative;z-index:2;font:500 24px/1 "Oswald";letter-spacing:.06em}.cat .arrow{position:relative;z-index:2;margin-top:8px;color:var(--gold);font-size:20px}
-.icon .line{fill:none;stroke:#b99b73;stroke-width:2}.icon .redfill{fill:#74241f;opacity:.85}.icon .creamfill{fill:#d8c09b;opacity:.86}
-.tabs{position:sticky;top:58px;z-index:25;display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;padding:12px 13px 10px;background:rgba(10,11,10,.96);border-bottom:1px solid #292720;white-space:nowrap}.tabs::-webkit-scrollbar{display:none}.tabs a{text-decoration:none;font:500 10px/1 "Oswald";color:#a89a85}.tabs a:first-child{color:#aa302a}
-.section{scroll-margin-top:102px;padding:34px 15px 20px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:16px}.section-head h2{margin:0;font:500 34px/1 "Oswald";letter-spacing:.12em}.section-head span{font:500 10px/1.25 "Oswald";color:#9b302a;letter-spacing:.16em;text-align:right}.section-note{margin:-7px 0 18px;font:italic 500 16px/1.35 "Cormorant Garamond",Georgia;color:#9e907b}
-.tincture-card{display:grid;grid-template-columns:102px minmax(0,1fr);gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.tincture-copy{min-width:0}.tincture-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}.tincture-head h3{margin:0;font:600 20px/1.08 "Cormorant Garamond",Georgia;color:#e5d4b7}.tincture-head strong{font:500 17px/1 "Oswald";white-space:nowrap;color:#dfc9a7}.ingredients{margin:6px 0 0;font-size:11px;line-height:1.45;color:#a69986}.mood{margin:7px 0 0;font:italic 500 15px/1.2 "Cormorant Garamond",Georgia;color:#9e8a6e}.badge{display:inline-block;margin-bottom:7px;padding:3px 7px;border:1px solid #8c2925;color:#bd4038;font:500 9px/1 "Oswald";letter-spacing:.08em}
-.drink-art{position:relative;width:102px;height:112px;overflow:hidden;border:1px solid #2f2b26;background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.08),transparent 22%),linear-gradient(145deg,#151412,#090a09)}.drink-art:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.07),transparent 25%),radial-gradient(circle at 78% 80%,rgba(140,41,37,.12),transparent 28%)}
-.glass{position:absolute;left:25px;bottom:18px;width:52px;height:68px;border:2px solid rgba(226,215,194,.55);border-top-width:3px;border-radius:5px 5px 16px 16px;background:linear-gradient(180deg,rgba(255,255,255,.07) 0 15%,var(--liquid) 16% 82%,rgba(255,255,255,.08) 83%);box-shadow:inset 8px 0 10px rgba(255,255,255,.06),inset -8px 0 12px rgba(0,0,0,.22),0 10px 18px rgba(0,0,0,.35)}.glass:after{content:"";position:absolute;left:8px;top:8px;width:5px;height:40px;border-radius:4px;background:linear-gradient(rgba(255,255,255,.42),transparent)}.garnish{position:absolute;right:13px;bottom:14px;width:24px;height:24px;border-radius:50%;background:var(--accent);box-shadow:-47px -70px 0 -7px var(--leaf)}.garnish:after{content:"";position:absolute;right:18px;top:-58px;width:11px;height:26px;border-radius:100% 0 100% 0;background:var(--leaf);transform:rotate(35deg)}
-.red{--liquid:linear-gradient(#bf3e33,#6e1719);--accent:#b9332e;--leaf:#476a35}.cream{--liquid:linear-gradient(#e4cba9,#b98b59);--accent:#d6b85d;--leaf:#806c3f}.green{--liquid:linear-gradient(#8aae37,#3f721e);--accent:#6c982e;--leaf:#4a7330}.orange{--liquid:linear-gradient(#d85528,#9d241d);--accent:#dc712d;--leaf:#7f2c20}.amber{--liquid:linear-gradient(#c37b29,#6f3a17);--accent:#e39b31;--leaf:#5d6a31}.gold{--liquid:linear-gradient(#c5a15a,#76552a);--accent:#c9ad68;--leaf:#6e5d2b}.coffee{--liquid:linear-gradient(#68442e,#291b18);--accent:#8b5d37;--leaf:#4f392c}.clear{--liquid:linear-gradient(rgba(183,212,186,.65),rgba(86,118,92,.55));--accent:#79986a;--leaf:#3e713d}.ruby{--liquid:linear-gradient(#8b2330,#40151c);--accent:#9d2031;--leaf:#4e6832}
-.menu-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}.menu-row h3{margin:0;font:600 20px/1.1 "Cormorant Garamond",Georgia;color:#e3d2b5}.menu-row p{margin:5px 0 0;font-size:12px;line-height:1.4;color:#998c7a}.menu-row strong{font:500 17px/1 "Oswald";white-space:nowrap;color:#dac39f}
-.food-atmo{position:relative;min-height:150px;margin:0 -15px 22px;display:grid;place-items:center;overflow:hidden;border-top:1px solid #30261f;border-bottom:1px solid #30261f;background:radial-gradient(circle at 48% 92%,rgba(223,73,26,.34),transparent 13%),radial-gradient(circle at 62% 90%,rgba(141,39,24,.4),transparent 18%),linear-gradient(180deg,#11100f,#18110e 70%,#0c0d0c)}.food-atmo:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(112deg,transparent 0 18px,rgba(132,59,33,.13) 19px 21px,transparent 22px 39px)}.food-atmo p{position:relative;margin:0;font:500 14px/1 "Oswald";letter-spacing:.25em;color:#d1b18a}
-.group-title{margin:27px 0 2px;font:500 13px/1 "Oswald";letter-spacing:.17em;text-transform:uppercase;color:#a2302a}.food-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:15px;padding:14px 0;border-bottom:1px solid var(--line)}.food-row span{font:600 19px/1.13 "Cormorant Garamond",Georgia;color:#dfceb1}.food-row strong{font:500 16px/1 "Oswald";white-space:nowrap;color:#d8c09c}.food-row .soon{font-size:10px;color:#9f302a}
-.hookah-card{padding:18px 0;border-bottom:1px solid var(--line)}.hookah-card.feature{margin:0 -8px;padding:18px 8px;border-left:2px solid #8c2925;background:linear-gradient(90deg,rgba(140,41,37,.11),transparent)}
-.contact{margin:28px 15px 18px;padding:22px;border:1px solid #3a352e;text-align:center;background:#11110f}.contact b{display:block;margin-bottom:10px;font:500 22px/1 "Oswald";letter-spacing:.12em}.contact a{text-decoration:none;font:500 18px/1 "Oswald";color:#e0c9a6}.contact p{margin:9px 0 0;font-size:12px;color:#938675}
-.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:40;width:min(100%,520px);height:58px;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(9,10,9,.97);border-top:1px solid #2f2b27}.bottom-nav a{display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;font:500 10px/1 "Oswald";letter-spacing:.07em;color:#aa9a84}.bottom-nav a:first-child{color:#aa302a}
-@media(max-width:430px){.brand-mini{font-size:10px;letter-spacing:.25em}.cat{min-height:144px;padding:14px}.cat .title{font-size:22px}.tincture-card{grid-template-columns:88px minmax(0,1fr);gap:11px}.drink-art{width:88px;height:100px}.glass{left:22px;bottom:14px;width:44px;height:61px}.tincture-head h3{font-size:18px}.ingredients{font-size:10.5px}.mood{font-size:13.5px}.section-head h2{font-size:32px}}
-@media(min-width:700px){body{padding:24px 0}.site{border:1px solid #25231f;border-radius:28px;overflow:hidden}.bottom-nav{bottom:24px;border-radius:0 0 28px 28px}}
-</style>
+<link rel="stylesheet" href="premium.css">
 </head>
 <body>
-<main class="site" id="top">
-<header class="topbar"><div class="monogram">ВГ</div><div class="brand-mini">ВЫСОКИЙ ГРАДУС</div><div class="burger" aria-hidden="true"><i></i><i></i><i></i></div></header>
-<section class="hero"><p class="hero-kicker">МЕСТО ПРИТЯЖЕНИЯ</p><h1>ВЫСОКИЙ<br>ГРАДУС</h1><div class="menu-word">МЕНЮ</div><p class="tag">Что есть • что пить • что запомнится</p></section>
-<nav class="categories" id="categories">
-<a class="cat" href="#nastoyki"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M18 52h44M27 52V24h26v28M31 20h18v4M36 30h8v15h-8z"/><circle class="redfill" cx="56" cy="48" r="11"/></svg><span class="title">НАСТОЙКИ</span><span class="arrow">→</span></a>
-<a class="cat" href="#cocktails"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M15 20h50L43 46v16M31 63h24"/><path class="redfill" d="M21 25h38L43 43H35z"/></svg><span class="title">КОКТЕЙЛИ</span><span class="arrow">→</span></a>
-<a class="cat" href="#shots"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M27 18h26l-4 43H31z"/><path class="redfill" d="M32 35h16l-2 22H34z"/></svg><span class="title">ШОТЫ</span><span class="arrow">→</span></a>
-<a class="cat" href="#food"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M14 53h52M20 49c2-18 13-27 20-27s18 9 20 27M40 18v4"/><circle class="creamfill" cx="40" cy="18" r="3"/></svg><span class="title">КУХНЯ</span><span class="arrow">→</span></a>
-<a class="cat" href="#drinks"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M30 18h20l4 43H26zM32 33h20"/><path class="creamfill" d="M30 36h22l2 23H28z"/></svg><span class="title">НАПИТКИ</span><span class="arrow">→</span></a>
-<a class="cat" href="#hookah"><svg class="icon" viewBox="0 0 80 80"><path class="line" d="M39 15v22M30 38h18v16c0 8-18 8-18 0zM21 61h37M48 43c15 0 16-18 8-22"/><circle class="redfill" cx="55" cy="20" r="4"/></svg><span class="title">КАЛЬЯН</span><span class="arrow">→</span></a>
-</nav>
-<nav class="tabs"><a href="#nastoyki">НАСТОЙКИ</a><a href="#cocktails">КОКТЕЙЛИ</a><a href="#shots">ШОТЫ</a><a href="#food">КУХНЯ</a><a href="#drinks">НАПИТКИ</a><a href="#hookah">КАЛЬЯН</a></nav>
-<section class="section" id="nastoyki"><div class="section-head"><h2>НАСТОЙКИ</h2><span>12 ПОЗИЦИЙ</span></div><p class="section-note">Наши настойки — ручная работа и натуральные ингредиенты.</p><article class="tincture-card">
-<div class="drink-art red" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><span class="badge">ХИТ</span><div class="tincture-head"><h3>Клубника — базилик</h3><strong>179 ₽</strong></div><p class="ingredients">водка • клубника • зелёный базилик • сахарный сироп</p><p class="mood">Ягодная свежесть с травяным акцентом</p></div></article>
-<article class="tincture-card">
-<div class="drink-art cream" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Банан — сливки</h3><strong>179 ₽</strong></div><p class="ingredients">водка • банан • молоко • сливки • сахар</p><p class="mood">Мягкий, сливочный, сладкий баланс</p></div></article>
-<article class="tincture-card">
-<div class="drink-art green" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Киви — мята</h3><strong>179 ₽</strong></div><p class="ingredients">водка • киви • лайм • мята • сахар</p><p class="mood">Лёгкий, освежающий, с яркой кислинкой</p></div></article>
-<article class="tincture-card">
-<div class="drink-art orange" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Апельсин — чили</h3><strong>179 ₽</strong></div><p class="ingredients">водка • апельсин • чили • сахарный сироп</p><p class="mood">Яркий, пряный, с согревающим послевкусием</p></div></article>
-<article class="tincture-card">
-<div class="drink-art amber" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Облепиховая</h3><strong>179 ₽</strong></div><p class="ingredients">водка • облепиха • апельсин • мёд • корица • ваниль</p><p class="mood">Насыщенная, тёплая, с цитрусовой кислинкой</p></div></article>
-<article class="tincture-card">
-<div class="drink-art gold" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Мёд — горчица</h3><strong>179 ₽</strong></div><p class="ingredients">водка • мёд • горчица • лимон • специи</p><p class="mood">Сладко, остро, неожиданно</p></div></article>
-<article class="tincture-card">
-<div class="drink-art coffee" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Кофе — сливки</h3><strong>179 ₽</strong></div><p class="ingredients">водка • кофе • шоколадное молоко • сливки • сгущённое молоко • ваниль</p><p class="mood">Десертный вкус с кофейным характером</p></div></article>
-<article class="tincture-card">
-<div class="drink-art clear" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Огуречная</h3><strong>179 ₽</strong></div><p class="ingredients">водка • свежий огурец • укроп • чеснок • специи</p><p class="mood">Свежая, пряная и очень гастрономичная</p></div></article>
-<article class="tincture-card">
-<div class="drink-art red" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><span class="badge">ОСТРО</span><div class="tincture-head"><h3>Чесночно-перцовая</h3><strong>179 ₽</strong></div><p class="ingredients">водка • чеснок • красный перец</p><p class="mood">Выразительная и согревающая</p></div></article>
-<article class="tincture-card">
-<div class="drink-art cream" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Халва</h3><strong>179 ₽</strong></div><p class="ingredients">водка • халва • сливки • молоко</p><p class="mood">Мягкая, сливочная, с восточным настроением</p></div></article>
-<article class="tincture-card">
-<div class="drink-art coffee" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Сникерс</h3><strong>179 ₽</strong></div><p class="ingredients">водка • Snickers • сливки • сгущённое молоко • сахар</p><p class="mood">Плотная, сладкая, почти как десерт</p></div></article>
-<article class="tincture-card">
-<div class="drink-art ruby" aria-hidden="true"><span class="glass"></span><span class="garnish"></span></div>
-<div class="tincture-copy"><div class="tincture-head"><h3>Вишня — мускатный орех</h3><strong>179 ₽</strong></div><p class="ingredients">водка • вишня • корица • мускатный орех • сахар</p><p class="mood">Насыщенная вишня и тёплые специи</p></div></article></section>
-<section class="section" id="cocktails"><div class="section-head"><h2>КОКТЕЙЛИ</h2><span>14 ПОЗИЦИЙ</span></div><p class="section-note">Классика, настроение и немного хорошего безрассудства.</p><article class="menu-row"><div><h3>Розовая пантера</h3><p>водка • амаретто • клубника • гренадин • сливки</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Секс на пляже</h3><p>водка • ананас • персик • вишня • сахарный сироп</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Джин Санрайз</h3><p>джин • ананас • клубника</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Пина Колада</h3><p>водка • ананас • кокос • сливки</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Космополитен</h3><p>водка • трипл-сек • вишня • лимон</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Клубничный мохито</h3><p>джин • клубника • лайм • мята • Sprite</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Барби</h3><p>водка • вишня • Sprite</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Как назовёшь, так и поедет</h3><p>водка • ананас • апельсин • сливки • гренадин</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Бора-Бора</h3><p>водка • ананас • лайм • Blue Curaçao • лимон</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Корсика</h3><p>джин • грейпфрут • лимон • малина • апельсин</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Виски-кола</h3><p>виски • кола</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Лонг-Айленд</h3><p>водка • ром • текила • джин • апельсиновый ликёр • лимон • кола</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Текила Бум</h3><p>текила • Sprite</p></div><strong>289 ₽</strong></article>
-<article class="menu-row"><div><h3>Самбука</h3><p>самбука • кофейные зёрна</p></div><strong>289 ₽</strong></article></section>
-<section class="section" id="shots"><div class="section-head"><h2>ШОТЫ</h2><span>8 ПОЗИЦИЙ</span></div><p class="section-note">Коротко, ярко и без лишних разговоров.</p><article class="menu-row"><div><h3>Привидение</h3><p>водка • дынный ликёр • Blue Curaçao</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>Ириска</h3><p>сливочный ликёр • Jägermeister</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>Тик-Так</h3><p>водка • ананас • клубника • лайм</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>ТАНЦЫ</h3><p>Jägermeister • апельсин • гренадин</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>B-52</h3><p>кофейный ликёр • сливочный ликёр • трипл-сек</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>Камикадзе</h3><p>водка • Blue Curaçao • лимон</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>Боярский</h3><p>водка • гренадин • Tabasco</p></div><strong>199 ₽</strong></article>
-<article class="menu-row"><div><h3>Серебряная пуля</h3><p>текила • кофейный ликёр</p></div><strong>199 ₽</strong></article></section>
-<section class="section" id="food"><div class="section-head"><h2>КУХНЯ</h2><span>БЕЗ ФОТО БЛЮД</span></div><div class="food-atmo"><p>ГОРЯЧЕЕ. СЫТНОЕ. НАСТОЯЩЕЕ.</p></div><h3 class="group-title">Закуски</h3>
-<article class="food-row"><span>Соленья</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Сырная нарезка</span><strong>220 ₽</strong></article>
-<article class="food-row"><span>Мясная нарезка</span><strong>250 ₽</strong></article>
-<article class="food-row"><span>Колбасная нарезка</span><strong>260 ₽</strong></article>
-<article class="food-row"><span>Рыбная нарезка</span><strong>500 ₽</strong></article>
-<article class="food-row"><span>Жареные гренки</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Салат «Цезарь»</span><strong>350 ₽</strong></article>
-<article class="food-row"><span>Канапе</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Ассорти брускетт — 3 шт. (овощная, рыбная, мясная)</span><strong>280 ₽</strong></article>
-<h3 class="group-title">Фритюр</h3>
-<article class="food-row"><span>Сырные палочки</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Стрипсы</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Наггетсы лёгкая (4–5 шт.)</span><strong>130 ₽</strong></article>
-<article class="food-row"><span>Наггетсы стандарт (6–8 шт.)</span><strong>200 ₽</strong></article>
-<article class="food-row"><span>Наггетсы большая (9–12 шт.)</span><strong>310 ₽</strong></article>
-<article class="food-row"><span>Крылья в панировке лёгкая (3–4 шт.)</span><strong>250 ₽</strong></article>
-<article class="food-row"><span>Крылья в панировке стандарт (5–6 шт.)</span><strong>380 ₽</strong></article>
-<article class="food-row"><span>Крылья в панировке большая (8–9 шт.)</span><strong>570 ₽</strong></article>
-<article class="food-row"><span>Луковые кольца лёгкая (6–8 шт.)</span><strong>120 ₽</strong></article>
-<article class="food-row"><span>Луковые кольца стандарт (10–12 шт.)</span><strong>180 ₽</strong></article>
-<article class="food-row"><span>Луковые кольца большая (14–16 шт.)</span><strong>250 ₽</strong></article>
-<article class="food-row"><span>Кольца кальмара</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Картофель фри</span><strong>100 ₽</strong></article>
-<h3 class="group-title">Гриль</h3>
-<article class="food-row"><span>Шашлык из свинины (100 г)</span><strong>230 ₽</strong></article>
-<article class="food-row"><span>Овощи гриль</span><strong class="soon">Скоро в продаже</strong></article>
-<article class="food-row"><span>Шампиньоны гриль</span><strong class="soon">Скоро в продаже</strong></article></section>
-<section class="section" id="drinks"><div class="section-head"><h2>НАПИТКИ</h2><span>БЕЗАЛКОГОЛЬНЫЕ</span></div><article class="menu-row"><div><h3>Компот (1 л)</h3></div><strong>250 ₽</strong></article><article class="menu-row"><div><h3>Сок</h3><p>Уточняйте наличие у официанта</p></div><strong>—</strong></article></section>
-<section class="section" id="hookah"><div class="section-head"><h2>КАЛЬЯН</h2><span>3 НАСТРОЕНИЯ</span></div><p class="section-note">Выбирай характер — дальше дым всё решит сам.</p><article class="hookah-card feature"><div class="tincture-head"><h3>Тяжёлый фреш</h3><strong>1200 ₽</strong></div><p class="ingredients">свежий, плотный и без компромиссов</p></article><article class="hookah-card"><div class="tincture-head"><h3>Средний фруктовый</h3><strong>1000 ₽</strong></div><p class="ingredients">фрукты здесь явно не ради витаминов</p></article><article class="hookah-card"><div class="tincture-head"><h3>Лёгкий десертный</h3><strong>900 ₽</strong></div><p class="ingredients">сладко, мягко, почти невинно</p></article></section>
-<section class="contact" id="contacts"><b>ВЫСОКИЙ ГРАДУС</b><a href="tel:+79969287820">8 996 928-78-20</a><p>Чаплыгин, Советская, 23А • каждый день 18:00–03:00</p></section>
+<div class="app">
+<header class="topbar"><div id="leftSlot"><div class="monogram">ВГ</div></div><div class="center" id="topTitle">ВЫСОКИЙ ГРАДУС</div><div id="rightSlot"><div class="burger" aria-hidden="true"><i></i><i></i><i></i></div></div></header>
+<main id="homeView">
+<section class="hero"><h1>ВЫСОКИЙ<br>ГРАДУС</h1><div class="menu-word">МЕНЮ</div><p class="tag">Что есть • что пить • что запомнится</p></section>
+<div class="category-board" aria-label="Разделы меню"><div class="category-grid">
+<button type="button" data-section="nastoyki" aria-label="Настойки"></button>
+<button type="button" data-section="cocktails" aria-label="Коктейли"></button>
+<button type="button" data-section="shots" aria-label="Шоты"></button>
+<button type="button" data-section="food" aria-label="Кухня"></button>
+<button type="button" data-section="drinks" aria-label="Напитки"></button>
+<button type="button" data-section="hookah" aria-label="Кальян"></button>
+</div></div>
+<div class="home-foot">ВЫСОКИЙ ГРАДУС — ВЫШЕ ОЖИДАНИЙ</div>
 </main>
-<nav class="bottom-nav"><a href="#categories">▦ МЕНЮ</a><a href="tel:+79969287820">✦ БРОНЬ</a><a href="#contacts">⌖ АДРЕС</a></nav>
+<main class="section-view" id="sectionView">
+<nav class="tabs" aria-label="Разделы меню">
+<button class="tab" type="button" data-section="nastoyki">НАСТОЙКИ</button>
+<button class="tab" type="button" data-section="cocktails">КОКТЕЙЛИ</button>
+<button class="tab" type="button" data-section="shots">ШОТЫ</button>
+<button class="tab" type="button" data-section="food">КУХНЯ</button>
+<button class="tab" type="button" data-section="drinks">НАПИТКИ</button>
+<button class="tab" type="button" data-section="hookah">КАЛЬЯН</button>
+</nav>
+<section class="section" id="sectionContent"></section>
+</main>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
