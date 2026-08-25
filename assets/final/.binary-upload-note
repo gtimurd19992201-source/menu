@@ -1,0 +1,1 @@
+Binary assets are stored as Git blobs referenced by the final tree.
