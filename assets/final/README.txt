@@ -1,0 +1,1 @@
+Temporary staging note; final binary assets are committed via Git blobs.
